@@ -18,14 +18,15 @@
 
 | Component                     | Stack / Tools Used                           |
 |------------------------------|----------------------------------------------|
-| 🧩 Models                     | mBART, T5, BERT                              |
+| 🧩 Models                     | mBART, T5, BERT                             |
 | 🔠 Spell/Grammar Correction   | T5 (fine-tuned on noisy Nepali corpus)      |
 | 🔄 Transliteration            | mBART (Romanized ⇌ Unicode)                 |
+| 🧭 Emotion Recognition        | BERT (trained on labeled Romanized comments)|
 | 🧭 Sentiment Classification   | BERT (trained on labeled Romanized comments)|
-| 🧠 Word Prediction            | n-Gram models + LLM contextual suggestions   |
+| 🧠 Word Prediction            | n-Gram models + LLM contextual suggestions  |
 | 🎨 Frontend                   | HTML, JavaScript, Tailwind CSS              |
-| 🗃️ Local Logging              | SQLite (lightweight offline DB)              |
-| ⚙️ Error Matching             | Damerau-Levenshtein Distance Algorithm       |
+| 🗃️ Local Logging              | SQLite (lightweight offline DB)             |
+| ⚙️ Error Matching             | Damerau-Levenshtein Distance Algorithm      |
 
 ---
 ### 🔌 Modules
@@ -33,9 +34,10 @@
 1. **Input Handler** – Accepts typed input (Unicode or Romanized)
 2. **Correction Engine** – Applies spell and grammar checks
 3. **Transliterator** – Converts Romanized ↔ Devanagari
-4. **Sentiment Analyzer** – Detects sentiment contextually
-5. **Word Predictor** – Recommends next word or correction
-6. **User Interface** – Chrome Extension or Web UI
+4. **Emotion Recognition** – Detects emotion from the text contextually
+5. **Sentiment Analyzer** – Detects sentiment contextually
+6. **Word Predictor** – Recommends next word or correction
+7. **User Interface** – Chrome Extension or Web UI
 
 ### 🧬 Model Training Overview
 
@@ -51,6 +53,7 @@
 
 - 🔄 Convert `ma timilai maya garchu` → `म तिमीलाई माया गर्छु`
 - ✅ Correct `मेरो नाम कुशल छा` → `मेरो नाम कुशल छ`
+- 📊 Sentiment: `Ma talai mardinchu!` → **Aggressive**
 - 📊 Sentiment: `Yo movie ekdam ramailo cha!` → **Positive**
 - ✍️ Type: `नेपाल` → auto-completes to `नेपाल एक सुन्दर देश हो।`
 
@@ -62,7 +65,7 @@
 
 To run locally (for contributors):
 ```bash
-git clone https://github.com/your-username/neptext.git
+git clone https://github.com/kuusall/neptext.git
 cd neptext
 npm install
 npm run dev
