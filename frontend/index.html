@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NepText</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-body {
+    font-family: 'Noto Sans', sans-serif;
+  }
+</style>
+<body class="bg-gradient-to-br from-teal-100 to-teal-50 font-sans min-h-screen flex flex-col items-center">
+
+
+  <!-- Navbar -->
+<header class="w-full bg-gradient-to-r from-teal-200 to-teal-400 p-4 text-white shadow-lg mb-18">
+  <div class="flex flex-col items-center md:flex-row md:justify-center md:items-center gap-10 text-center md:text-left">
+    <!-- Logo -->
+    <img src="/frontend/images/logo.png" alt="NepText Logo" class="w-20 h-20 rounded-full border-2 border-white shadow-md">
+    
+    <!-- Title + Subtitle -->
+    <div>
+      <h1 class="text-2xl font-bold text-yellow-700 font-heading">NepText – Nepali NLP Toolkit</h1>
+      <p class="text-sm font-normal opacity-80 text-yellow-900 font-body">Transliteration • Spell Check • Sentiment • Prediction</p>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Card -->
+   <!-- <div class="relative w-full max-w-md mx-auto rounded-lg p-4"> -->
+  
+  <!-- Cartoon Boy -->
+  <!-- <img src="/nep-text/frontend/images/boy.png" 
+       alt="Cartoon Boy" 
+       class="absolute -top-6 -right-50 w-20 h-auto pointer-events-none select-none">
+
+</div> -->
+
+    <!-- Cartoon Boy -->
+  <img src="/frontend/images/boy.png" 
+       alt="Cartoon Boy" 
+       class="absolute bottom-20 -right-8 w-30 h-auto pointer-events-none select-none">
+
+  <main class="relative mt-6 w-full max-w-4xl bg-gradient-to-br from-white to-teal-50 shadow-2xl rounded-xl p-8">
+    
+    <!-- Input Section -->
+    <label class="block mb-3 font-body font-bold text-yellow-900 text-lg">Enter Text</label>
+    <textarea id="inputText" class="w-full border border-gray-300 rounded-xl p-4 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-400 text-yellow-500 text-lg" rows="4" placeholder="Type Romanized or Devanagari text..."></textarea>
+    
+    <!-- Action Buttons -->
+    <div class="flex flex-wrap gap-4 mb-6">
+      <button id="btnTranslit" class="bg-[#10375C] hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg shadow-md transition">Transliterate</button>
+      <button id="btnSpell" class="bg-emerald-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-lg shadow-md transition">Spell Check</button>
+      <button id="btnSentiment" class="bg-[#185519] hover:bg-yellow-600 text-white px-5 py-2.5 rounded-lg shadow-md transition">Sentiment Analysis</button>
+      <button id="btnPredict" class="bg-[#EB8317] hover:bg-purple-600 text-white px-5 py-2.5 rounded-lg shadow-md transition">Predict Word</button>
+    </div>
+
+    <!-- Output Section -->
+    <div id="output" class="bg-gray-50 p-6 rounded-xl border border-gray-300 shadow-inner text-yellow-900 text-lg min-h-[80px]">
+      Output will appear here...
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <!-- <footer class="mt-8 text-gray-500 text-sm">
+    &copy; 2025 NepText Project Team
+  </footer> -->
+
+  <!-- Dummy JS for Demo -->
+  <script>
+    const outputDiv = document.getElementById("output");
+
+    document.getElementById("btnTranslit").addEventListener("click", () => {
+      outputDiv.innerText = "म सन्चै छु"; // Dummy transliteration
+    });
+
+    document.getElementById("btnSpell").addEventListener("click", () => {
+      outputDiv.innerText = "Corrected: म सन्चै छु";
+    });
+
+    document.getElementById("btnSentiment").addEventListener("click", () => {
+      outputDiv.innerText = "Predicted Sentiment: Positive ✅";
+    });
+
+    document.getElementById("btnPredict").addEventListener("click", () => {
+      outputDiv.innerText = "Suggestions: छैन, भएर, हुन्छ";
+    });
+  </script>
+
+</body>
+</html>
