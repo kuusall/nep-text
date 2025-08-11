@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         hero:
-          "bg-gradient-gold text-primary-foreground border border-border shadow-elevated hover:brightness-105 active:brightness-95",
+          "bg-gradient-yellow text-primary-foreground border border-border shadow-elevated hover:brightness-105 active:brightness-95",
         soft:
           "bg-accent text-accent-foreground border border-border hover:bg-accent/80",
         chip:

@@ -62,11 +62,11 @@ All colors MUST be HSL.
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
 
-    /* Gold palette and gradient */
-    --gold-500: 46 95% 50%;
-    --gold-400: 47 95% 62%;
-    --gold-200: 48 30% 96%;
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-500)) 0%, hsl(var(--gold-400)) 55%, hsl(var(--gold-200)) 100%);
+    /* yellow palette and gradient */
+    --yellow-500: 46 95% 50%;
+    --yellow-400: 47 95% 62%;
+    --yellow-200: 48 30% 96%;
+    --gradient-yellow: linear-gradient(135deg, hsl(var(--yellow-500)) 0%, hsl(var(--yellow-400)) 55%, hsl(var(--yellow-200)) 100%);
   }
 
   .dark {
@@ -114,11 +114,11 @@ All colors MUST be HSL.
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
 
-    /* Gold palette and gradient - dark */
-    --gold-500: 46 95% 50%;
-    --gold-400: 47 95% 60%;
-    --gold-200: 48 22% 90%;
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-500)) 0%, hsl(var(--gold-400)) 55%, hsl(var(--gold-200)) 100%);
+    /* yellow palette and gradient - dark */
+    --yellow-500: 46 95% 50%;
+    --yellow-400: 47 95% 60%;
+    --yellow-200: 48 22% 90%;
+    --gradient-yellow: linear-gradient(135deg, hsl(var(--yellow-500)) 0%, hsl(var(--yellow-400)) 55%, hsl(var(--yellow-200)) 100%);
   }
 }
 
@@ -139,8 +139,8 @@ All colors MUST be HSL.
   .bg-gradient-primary {
     background-image: var(--gradient-primary);
   }
-  .bg-gradient-gold {
-    background-image: var(--gradient-gold);
+  .bg-gradient-yellow {
+    background-image: var(--gradient-yellow);
   }
   .shadow-elevated {
     box-shadow: var(--shadow-elevated);
