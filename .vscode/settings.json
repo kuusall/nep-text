@@ -1,0 +1,4 @@
+{
+    "jupytextSync.pythonExecutable": "./nep-text-venv/bin/python",
+    "python.defaultInterpreterPath": "/nep-text-venv/bin/python"
+}

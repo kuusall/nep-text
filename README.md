@@ -21,8 +21,8 @@
 | 🧩 Models                     | mBART, T5, BERT                             |
 | 🔠 Spell/Grammar Correction   | T5 (fine-tuned on noisy Nepali corpus)      |
 | 🔄 Transliteration            | mBART (Romanized ⇌ Unicode)                 |
-| 🧭 Emotion Recognition        | BERT (trained on labeled Romanized comments)|
-| 🧭 Sentiment Classification   | BERT (trained on labeled Romanized comments)|
+| 🧭 Emotion Recognition        | distillBERT (trained on labeled Romanized comments)|
+| 🧭 Sentiment Classification   | distillBERT (trained on labeled Romanized comments)|
 | 🧠 Word Prediction            | n-Gram models + LLM contextual suggestions  |
 | 🎨 Frontend                   | HTML, JavaScript, Tailwind CSS              |
 | 🗃️ Local Logging              | SQLite (lightweight offline DB)             |
@@ -45,7 +45,7 @@
 |-------|------|---------|----------|
 | mBART | Transliteration | Romanized-Devanagari pairs | Supervised Seq2Seq |
 | T5    | Spell + Grammar Correction | Corrupted ↔ Correct Pairs | Noise injection |
-| BERT  | Sentiment Classification | Romanized Comments (Tagged) | Cross-Entropy Loss |
+| distillBERT  | Sentiment Classification | Romanized Comments (Tagged) | Cross-Entropy Loss |
 
 ---
 
@@ -53,7 +53,7 @@
 
 - 🔄 Convert `ma timilai maya garchu` → `म तिमीलाई माया गर्छु`
 - ✅ Correct `मेरो नाम कुशल छा` → `मेरो नाम कुशल छ`
-- 📊 Sentiment: `Ma talai mardinchu!` → **Aggressive**
+- 📊 Emotion: `Ma talai mardinchu!` → **Aggressive**
 - 📊 Sentiment: `Yo movie ekdam ramailo cha!` → **Positive**
 - ✍️ Type: `नेपाल` → auto-completes to `नेपाल एक सुन्दर देश हो।`
 
